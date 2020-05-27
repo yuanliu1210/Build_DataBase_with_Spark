@@ -1,0 +1,40 @@
+Data dictionary¶
+Fact Table - This will contain information from the I94 immigration data showing the immigrant events
+Columns:
+cicid -- primary key
+i94yr = 4 digit year
+i94mon = numeric month
+i94cit = 3 digit code of origin city
+i94port = 3 character code of destination city
+arrdate = arrival date
+i94mode = 1 digit travel code
+depdate = departure date
+i94visa = reason for immigratio
+airline = airline taken
+visatype = type of visa
+
+1st Dimension Table - This will contain information of immigrants profile. The columns is selected from I94 immigration data
+Columns:
+cicid --primary key
+i94cit = origin city of immigrants
+i94res = residience of immigrants
+i94addr = addresss of immigrants
+i94bir = birth date of immigrants
+occup = occupation of immigrants
+biryear = the year of birth of immigrants
+gender = immigrants gender
+
+2nd Dimension Table - This will contain the information of city they arrived. The table will created by join city temperature and city demographic table
+Columns: City -- primary key
+State -- primary key
+Median Age = the average age
+Total Population = total population of the city
+Foreign-born = the population borned in foreign country
+Average Household Size = average household size
+State Code = the code of state
+American Indian and Alaska Native = the number of race American Indian and Alaska Native
+Asian = the number of race Asian
+Black or African-American = the number of race Black or African-American
+Hispanic or Latino = the number of race Hispanic or Latino
+White = the number of race White
+AverageTemperature = the average temperature of the city
